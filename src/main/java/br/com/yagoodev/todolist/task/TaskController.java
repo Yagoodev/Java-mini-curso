@@ -29,7 +29,7 @@ public class TaskController {
   public ResponseEntity create(@RequestBody TaskModel taskModel, HttpServletRequest request) {
     UUID userId = (UUID) request.getAttribute("userId");
 
-    //taskModel.setUserId(userId);
+    taskModel.setUserId(userId);
 
     LocalDateTime currentDate = LocalDateTime.now();
 
